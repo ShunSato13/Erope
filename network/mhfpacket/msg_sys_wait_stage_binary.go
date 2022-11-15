@@ -6,7 +6,7 @@ import (
 	"github.com/ShunSato13/Erupe/common/bfutil"
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgSysWaitStageBinary represents the MSG_SYS_WAIT_STAGE_BINARY

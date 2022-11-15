@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/ShunSato13/Erupe/network"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 	"go.uber.org/zap"
 )
 

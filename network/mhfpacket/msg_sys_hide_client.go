@@ -5,7 +5,7 @@ import (
 
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgSysHideClient represents the MSG_SYS_HIDE_CLIENT

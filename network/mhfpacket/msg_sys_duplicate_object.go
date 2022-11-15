@@ -3,7 +3,7 @@ package mhfpacket
 import (
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgSysDuplicateObject represents the MSG_SYS_DUPLICATE_OBJECT

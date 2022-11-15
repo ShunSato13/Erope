@@ -5,7 +5,7 @@ import (
 
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgMhfStampcardStamp represents the MSG_MHF_STAMPCARD_STAMP

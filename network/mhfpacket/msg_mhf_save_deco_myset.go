@@ -5,7 +5,7 @@ import (
 
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgMhfSaveDecoMyset represents the MSG_MHF_SAVE_DECO_MYSET

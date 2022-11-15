@@ -9,7 +9,7 @@ import (
 	"github.com/ShunSato13/Erupe/common/bfutil"
 
 	"github.com/ShunSato13/Erupe/network/mhfpacket"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 	"go.uber.org/zap"
 )
 

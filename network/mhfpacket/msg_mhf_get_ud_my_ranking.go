@@ -5,7 +5,7 @@ import (
 
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgMhfGetUdMyRanking represents the MSG_MHF_GET_UD_MY_RANKING

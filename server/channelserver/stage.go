@@ -4,7 +4,7 @@ import (
 	"sync"
 
 	"github.com/ShunSato13/Erupe/network/mhfpacket"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // StageObject holds infomation about a specific stage object.

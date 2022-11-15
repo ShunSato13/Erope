@@ -5,7 +5,7 @@ import (
 
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgMhfEnumerateFestaIntermediatePrize represents the MSG_MHF_ENUMERATE_FESTA_INTERMEDIATE_PRIZE

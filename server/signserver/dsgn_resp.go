@@ -3,7 +3,7 @@ package signserver
 import (
 	"fmt"
 
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 	"go.uber.org/zap"
 )
 

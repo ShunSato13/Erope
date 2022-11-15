@@ -5,7 +5,7 @@ import (
 
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgMhfGetGuildWeeklyBonusActiveCount represents the MSG_MHF_GET_GUILD_WEEKLY_BONUS_ACTIVE_COUNT

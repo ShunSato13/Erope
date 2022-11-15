@@ -3,7 +3,7 @@ package mhfpacket
 import (
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgSysNotifyUserBinary represents the MSG_SYS_NOTIFY_USER_BINARY

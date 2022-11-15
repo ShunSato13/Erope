@@ -16,7 +16,7 @@ import (
 	"github.com/ShunSato13/Erupe/network/mhfpacket"
 	"github.com/ShunSato13/Erupe/server/channelserver/compression/deltacomp"
 	"github.com/ShunSato13/Erupe/server/channelserver/compression/nullcomp"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 	"go.uber.org/zap"
 	"golang.org/x/text/encoding/japanese"
 	"golang.org/x/text/transform"

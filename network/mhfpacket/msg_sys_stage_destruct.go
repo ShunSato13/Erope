@@ -3,7 +3,7 @@ package mhfpacket
 import (
 	"github.com/ShunSato13/Erupe/network"
 	"github.com/ShunSato13/Erupe/network/clientctx"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 // MsgSysStageDestruct represents the MSG_SYS_STAGE_DESTRUCT

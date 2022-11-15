@@ -8,7 +8,7 @@ import (
 	"github.com/ShunSato13/Erupe/config"
 	"github.com/ShunSato13/Erupe/network/binpacket"
 	"github.com/ShunSato13/Erupe/network/mhfpacket"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 	"github.com/jmoiron/sqlx"
 	"github.com/matterbridge/discordgo"
 	"go.uber.org/zap"

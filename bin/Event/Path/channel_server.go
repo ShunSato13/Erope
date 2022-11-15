@@ -7,7 +7,7 @@ import (
 
 	"github.com/ShunSato13/Erupe/config"
 	"/usr/mhf/ErupeServer//network/mhfpacket"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
 )

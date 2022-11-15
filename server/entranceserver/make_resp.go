@@ -7,7 +7,7 @@ import (
 	"github.com/ShunSato13/Erupe/common/stringsupport"
 
 	"github.com/ShunSato13/Erupe/config"
-	"github.com/ShunSato13/byteframe"
+	"github.com/Andoryuuta/byteframe"
 )
 
 func paddedString(x string, size uint) []byte {
