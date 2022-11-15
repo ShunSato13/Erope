@@ -3,10 +3,10 @@ package mhfpacket
 import (
 	"errors"
 
-	"github.com/Andoryuuta/Erupe/common/bfutil"
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/Erupe/network/clientctx"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/common/bfutil"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/Erupe/network/clientctx"
+	"github.com/ShunSato13/byteframe"
 )
 
 // MsgSysCreateStage represents the MSG_SYS_CREATE_STAGE

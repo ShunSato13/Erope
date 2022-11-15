@@ -3,8 +3,8 @@ package channelserver
 import (
 	"sync"
 
-	"github.com/Andoryuuta/Erupe/network/mhfpacket"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network/mhfpacket"
+	"github.com/ShunSato13/byteframe"
 )
 
 // StageObject holds infomation about a specific stage object.

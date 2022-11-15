@@ -4,10 +4,10 @@ import (
 	"encoding/binary"
 	"net"
 
-	"github.com/Andoryuuta/Erupe/common/stringsupport"
+	"github.com/ShunSato13/Erupe/common/stringsupport"
 
-	"github.com/Andoryuuta/Erupe/config"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/config"
+	"github.com/ShunSato13/byteframe"
 )
 
 func paddedString(x string, size uint) []byte {
@@ -31,7 +31,7 @@ func encodeServerInfo(serverInfos []config.EntranceServerInfo) []byte {
 		bf.WriteUint8(si.Season)
 		bf.WriteUint8(si.Unk6)
 
-		// TODO(Andoryuuta): Clean this up.
+		// TODO(ShunSato13): Clean this up.
 		shiftjisName, err := stringsupport.ConvertUTF8ToShiftJIS(si.Name)
 		if err != nil {
 			panic(err)
@@ -85,7 +85,7 @@ func makeResp(servers []config.EntranceServerInfo) []byte {
 	bf := byteframe.NewByteFrame()
 	bf.WriteBytes(makeHeader(rawServerData, "SV2", uint16(len(servers)), 0x00))
 
-	// TODO(Andoryuuta): Figure out what this user data is.
+	// TODO(ShunSato13): Figure out what this user data is.
 	// Is it for the friends list at the world selection screen?
 	// If so, how does it work without the entrance server connection being authenticated?
 	bf.WriteBytes(makeHeader([]byte{}, "USR", 0, 0x00))

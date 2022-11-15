@@ -11,12 +11,12 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/Andoryuuta/Erupe/common/bfutil"
+	"github.com/ShunSato13/Erupe/common/bfutil"
 
-	"github.com/Andoryuuta/Erupe/network/mhfpacket"
-	"github.com/Andoryuuta/Erupe/server/channelserver/compression/deltacomp"
-	"github.com/Andoryuuta/Erupe/server/channelserver/compression/nullcomp"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network/mhfpacket"
+	"github.com/ShunSato13/Erupe/server/channelserver/compression/deltacomp"
+	"github.com/ShunSato13/Erupe/server/channelserver/compression/nullcomp"
+	"github.com/ShunSato13/byteframe"
 	"go.uber.org/zap"
 	"golang.org/x/text/encoding/japanese"
 	"golang.org/x/text/transform"
@@ -289,7 +289,7 @@ func handleMsgSysIssueLogkey(s *Session, p mhfpacket.MHFPacket) {
 		panic(err)
 	}
 
-	// TODO(Andoryuuta): In the offical client, the log key index is off by one,
+	// TODO(ShunSato13): In the offical client, the log key index is off by one,
 	// cutting off the last byte in _most uses_. Find and document these accordingly.
 	s.Lock()
 	s.logKey = logKey
@@ -447,7 +447,7 @@ func removeSessionFromStage(s *Session) {
 			s.stage.BroadcastMHF(&mhfpacket.MsgSysDeleteObject{
 				ObjID: stageObject.id,
 			}, s)
-			// TODO(Andoryuuta): Should this be sent to the owner's client as well? it currently isn't.
+			// TODO(ShunSato13): Should this be sent to the owner's client as well? it currently isn't.
 
 			// Actually delete it form the objects map.
 			delete(s.stage.objects, objID)
@@ -522,7 +522,7 @@ func handleMsgSysLeaveStage(s *Session, p mhfpacket.MHFPacket) {}
 
 func handleMsgSysLockStage(s *Session, p mhfpacket.MHFPacket) {
 	pkt := p.(*mhfpacket.MsgSysLockStage)
-	// TODO(Andoryuuta): What does this packet _actually_ do?
+	// TODO(ShunSato13): What does this packet _actually_ do?
 	doAckSimpleSucceed(s, pkt.AckHandle, []byte{0x00, 0x00, 0x00, 0x00})
 }
 
@@ -604,7 +604,7 @@ func handleMsgSysUnreserveStage(s *Session, p mhfpacket.MHFPacket) {
 }
 
 func handleMsgSysSetStagePass(s *Session, p mhfpacket.MHFPacket) {
-	// TODO(Andoryuuta): Implement me!
+	// TODO(ShunSato13): Implement me!
 }
 
 func handleMsgSysWaitStageBinary(s *Session, p mhfpacket.MHFPacket) {
@@ -617,7 +617,7 @@ func handleMsgSysWaitStageBinary(s *Session, p mhfpacket.MHFPacket) {
 	stage, gotStage := s.server.stages[stageID]
 	s.server.stagesLock.Unlock()
 
-	// TODO(Andoryuuta): This is a hack for a binary part that none of the clients set, figure out what it represents.
+	// TODO(ShunSato13): This is a hack for a binary part that none of the clients set, figure out what it represents.
 	// In the packet captures, it seemingly comes out of nowhere, so presumably the server makes it.
 	if pkt.BinaryType0 == 1 && pkt.BinaryType1 == 12 {
 		// This might contain the hunter count, or max player count?
@@ -647,7 +647,7 @@ func handleMsgSysWaitStageBinary(s *Session, p mhfpacket.MHFPacket) {
 				continue
 			}
 
-			// TODO(Andoryuuta): Figure out what the game sends on timeout and implement it!
+			// TODO(ShunSato13): Figure out what the game sends on timeout and implement it!
 			/*
 				if timeout {
 					s.logger.Warn("Failed to get stage binary", zap.Uint8("BinaryType0", pkt.BinaryType0), zap.Uint8("pkt.BinaryType1", pkt.BinaryType1))
@@ -710,7 +710,7 @@ func handleMsgSysGetStageBinary(s *Session, p mhfpacket.MHFPacket) {
 		// is it required before the party joining can be completed
 		//s.QueueAck(pkt.AckHandle, []byte{0x01, 0x00, 0x00, 0x00, 0x10})
 
-		// TODO(Andoryuuta): This doesn't fit a normal ack packet? where is this from?
+		// TODO(ShunSato13): This doesn't fit a normal ack packet? where is this from?
 		// This would be a buffered(0x01), non-error(0x00), with no data payload (size 0x00, 0x00) packet.
 		// but for some reason has a 0x10 on the end that the client shouldn't parse?
 
@@ -742,7 +742,7 @@ func handleMsgSysEnumerateClient(s *Session, p mhfpacket.MHFPacket) {
 	resp := byteframe.NewByteFrame()
 	stage.RLock()
 
-	// TODO(Andoryuuta): Is only the reservations needed? Do clients send this packet for mezeporta as well?
+	// TODO(ShunSato13): Is only the reservations needed? Do clients send this packet for mezeporta as well?
 
 	// Make a map to deduplicate the charIDs between the unreserved clients and the reservations.
 	deduped := make(map[uint32]interface{})
@@ -1229,7 +1229,7 @@ func handleMsgMhfOprtMail(s *Session, p mhfpacket.MHFPacket) {}
 
 func handleMsgMhfLoadFavoriteQuest(s *Session, p mhfpacket.MHFPacket) {
 	pkt := p.(*mhfpacket.MsgMhfLoadFavoriteQuest)
-	// TODO(Andoryuuta): Save data from MsgMhfSaveFavoriteQuest and resend it here.
+	// TODO(ShunSato13): Save data from MsgMhfSaveFavoriteQuest and resend it here.
 	// Fist: Using a no favourites placeholder to avoid an in game error message
 	// being sent every time you use a counter when it fails to load
 	doAckBufSucceed(s, pkt.AckHandle, []byte{0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})
@@ -2019,7 +2019,7 @@ func handleMsgMhfGetWeeklySeibatuRankingReward(s *Session, p mhfpacket.MHFPacket
 func handleMsgMhfGetEarthStatus(s *Session, p mhfpacket.MHFPacket) {
 	pkt := p.(*mhfpacket.MsgMhfGetEarthStatus)
 
-	// TODO(Andoryuuta): Track down format for this data,
+	// TODO(ShunSato13): Track down format for this data,
 	//	it can somehow be parsed as 8*uint32 chunks if the header is right.
 	/*
 		BEFORE ack-refactor:
@@ -2045,7 +2045,7 @@ func handleMsgMhfLoadPartner(s *Session, p mhfpacket.MHFPacket) {
 	} else {
 		doAckBufSucceed(s, pkt.AckHandle, []byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})
 	}
-	// TODO(Andoryuuta): Figure out unusual double ack. One sized, one not.
+	// TODO(ShunSato13): Figure out unusual double ack. One sized, one not.
 	doAckSimpleSucceed(s, pkt.AckHandle, []byte{0x00, 0x00, 0x00, 0x00})
 }
 
@@ -2152,7 +2152,7 @@ func handleMsgMhfLoadDecoMyset(s *Session, p mhfpacket.MHFPacket) {
 
 func handleMsgMhfSaveDecoMyset(s *Session, p mhfpacket.MHFPacket) {
 	pkt := p.(*mhfpacket.MsgMhfSaveDecoMyset)
-	// https://gist.github.com/Andoryuuta/9c524da7285e4b5ca7e52e0fc1ca1daf
+	// https://gist.github.com/ShunSato13/9c524da7285e4b5ca7e52e0fc1ca1daf
 	var loadData []byte
 	bf := byteframe.NewByteFrameFromBytes(pkt.RawDataPayload[1:]) // skip first unk byte
 	err := s.server.db.QueryRow("SELECT decomyset FROM characters WHERE id = $1", s.charID).Scan(&loadData)

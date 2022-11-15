@@ -7,7 +7,7 @@ import (
 	"io"
 	"net"
 
-	"github.com/Andoryuuta/Erupe/network/crypto"
+	"github.com/ShunSato13/Erupe/network/crypto"
 )
 
 // CryptConn represents a MHF encrypted two-way connection,

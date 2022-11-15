@@ -3,9 +3,9 @@ package mhfpacket
 import (
 	"fmt"
 
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/Erupe/network/clientctx"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/Erupe/network/clientctx"
+	"github.com/ShunSato13/byteframe"
 )
 
 // MsgSysOperateRegister represents the MSG_SYS_OPERATE_REGISTER
@@ -26,7 +26,7 @@ func (m *MsgSysOperateRegister) Parse(bf *byteframe.ByteFrame, ctx *clientctx.Cl
 	m.RegisterID = bf.ReadUint32()
 	fixedZero := bf.ReadUint16()
 
-	// TODO(Andoryuuta): Remove after real-world verification.
+	// TODO(ShunSato13): Remove after real-world verification.
 	if fixedZero != 0 {
 		return fmt.Errorf("Expected fixed-0 values, got %d", fixedZero)
 	}

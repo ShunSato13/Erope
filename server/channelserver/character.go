@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"encoding/binary"
 
-	"github.com/Andoryuuta/Erupe/server/channelserver/compression/nullcomp"
+	"github.com/ShunSato13/Erupe/server/channelserver/compression/nullcomp"
 	"go.uber.org/zap"
 )
 

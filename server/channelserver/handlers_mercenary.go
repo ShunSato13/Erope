@@ -3,8 +3,8 @@ package channelserver
 import (
 	"math/rand"
 
-	"github.com/Andoryuuta/Erupe/network/mhfpacket"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network/mhfpacket"
+	"github.com/ShunSato13/byteframe"
 	"go.uber.org/zap"
 )
 

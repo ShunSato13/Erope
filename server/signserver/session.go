@@ -6,8 +6,8 @@ import (
 	"net"
 	"sync"
 
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/byteframe"
 	"go.uber.org/zap"
 )
 
@@ -84,7 +84,7 @@ func (s *Session) handleDSGNRequest(bf *byteframe.ByteFrame) error {
 		zap.String("reqUnk", reqUnk),
 	)
 
-	// TODO(Andoryuuta): remove plaintext password storage if this ever becomes more than a toy project.
+	// TODO(ShunSato13): remove plaintext password storage if this ever becomes more than a toy project.
 	var (
 		id       int
 		password string
@@ -96,7 +96,7 @@ func (s *Session) handleDSGNRequest(bf *byteframe.ByteFrame) error {
 		s.logger.Info("Account not found", zap.String("reqUsername", reqUsername))
 		serverRespBytes = makeSignInFailureResp(SIGN_EAUTH)
 
-		// HACK(Andoryuuta): Create a new account if it doesn't exit.
+		// HACK(ShunSato13): Create a new account if it doesn't exit.
 		s.logger.Info("Creating account", zap.String("reqUsername", reqUsername), zap.String("reqPassword", reqPassword))
 		err = s.server.registerDBAccount(reqUsername, reqPassword)
 		if err != nil {

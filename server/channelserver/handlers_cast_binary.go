@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Andoryuuta/Erupe/network/binpacket"
-	"github.com/Andoryuuta/Erupe/network/mhfpacket"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network/binpacket"
+	"github.com/ShunSato13/Erupe/network/mhfpacket"
+	"github.com/ShunSato13/byteframe"
 )
 
 // MSG_SYS_CAST[ED]_BINARY types enum

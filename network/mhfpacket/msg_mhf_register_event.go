@@ -1,9 +1,9 @@
 package mhfpacket
 
 import (
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/Erupe/network/clientctx"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/Erupe/network/clientctx"
+	"github.com/ShunSato13/byteframe"
 )
 
 // MsgMhfRegisterEvent represents the MSG_MHF_REGISTER_EVENT

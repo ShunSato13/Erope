@@ -3,9 +3,9 @@ package mhfpacket
 import (
 	"errors"
 
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/Erupe/network/clientctx"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/Erupe/network/clientctx"
+	"github.com/ShunSato13/byteframe"
 )
 
 // MsgMhfStateFestaG represents the MSG_MHF_STATE_FESTA_G

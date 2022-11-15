@@ -20,7 +20,7 @@ Currently allows a JP MHF client (with GameGuard removed) to:
 
 # Installation
 ## Server
-1. Clone the repo with `git clone https://github.com/Andoryuuta/Erupe.git`
+1. Clone the repo with `git clone https://github.com/ShunSato13/Erupe.git`
 2. Install PostgreSQL
 3. Launch psql shell, `CREATE DATABASE erupe;`.
 4. Setup database with golang-migrate:
@@ -75,7 +75,7 @@ Finally, edit the config.json and set `UseOriginalLauncherFiles` to `true` under
 cd Erupe
 go run .
 ```
-**Note**: If you experience port-binding issues and have Hyper-V/wsl2 installed, please see [this issue](https://github.com/Andoryuuta/Erupe/issues/34).
+**Note**: If you experience port-binding issues and have Hyper-V/wsl2 installed, please see [this issue](https://github.com/ShunSato13/Erupe/issues/34).
 
 ## Client
 Add to hosts:

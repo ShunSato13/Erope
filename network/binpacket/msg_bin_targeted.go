@@ -1,8 +1,8 @@
 package binpacket
 
 import (
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/byteframe"
 )
 
 // MsgBinTargeted is a format used for some broadcast types

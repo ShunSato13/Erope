@@ -3,12 +3,12 @@ package mhfpacket
 import (
 	"errors"
 
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/Erupe/network/clientctx"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/Erupe/network/clientctx"
+	"github.com/ShunSato13/byteframe"
 )
 
-// TODO(Andoryuuta): Make up a name for this packet, not reserved anymore. Called "Is_update_guild_msg_board"
+// TODO(ShunSato13): Make up a name for this packet, not reserved anymore. Called "Is_update_guild_msg_board"
 
 // MsgSysReserve203 represents the MSG_SYS_reserve203
 type MsgSysReserve203 struct {

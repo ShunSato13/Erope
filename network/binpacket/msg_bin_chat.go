@@ -1,8 +1,8 @@
 package binpacket
 
 import (
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/byteframe"
 )
 
 // ChatType represents the chat message type (Thanks to @Alice on discord for identifying these!)
@@ -39,7 +39,7 @@ func (m *MsgBinChat) Parse(bf *byteframe.ByteFrame) error {
 	senderNameSize := bf.ReadUint16()
 	messageSize := bf.ReadUint16()
 
-	// TODO(Andoryuuta): Need proper shift-jis and null termination.
+	// TODO(ShunSato13): Need proper shift-jis and null termination.
 	m.Message = string(bf.ReadBytes(uint(messageSize))[:messageSize-1])
 	m.SenderName = string(bf.ReadBytes(uint(senderNameSize))[:senderNameSize-1])
 

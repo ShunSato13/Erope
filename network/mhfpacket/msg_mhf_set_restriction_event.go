@@ -3,9 +3,9 @@ package mhfpacket
 import (
 	"errors"
 
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/Erupe/network/clientctx"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/Erupe/network/clientctx"
+	"github.com/ShunSato13/byteframe"
 )
 
 // MsgMhfSetRestrictionEvent represents the MSG_MHF_SET_RESTRICTION_EVENT

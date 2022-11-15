@@ -18,12 +18,12 @@ func serverList(s *Server, w http.ResponseWriter, r *http.Request) {
 }
 
 func serverUniqueName(w http.ResponseWriter, r *http.Request) {
-	// TODO(Andoryuuta): Implement checking for unique character name.
+	// TODO(ShunSato13): Implement checking for unique character name.
 	fmt.Fprintf(w, `<?xml version="1.0" encoding="ISO-8859-1"?><uniq code="200">OK</uniq>`)
 }
 
 func jpLogin(w http.ResponseWriter, r *http.Request) {
-	// HACK(Andoryuuta): Return the given password back as the `skey` to defer the login logic to the sign server.
+	// HACK(ShunSato13): Return the given password back as the `skey` to defer the login logic to the sign server.
 	resultJSON := fmt.Sprintf(`{"result": "Ok", "skey": "%s", "code": "000", "msg": ""}`, r.FormValue("pw"))
 
 	fmt.Fprintf(w,

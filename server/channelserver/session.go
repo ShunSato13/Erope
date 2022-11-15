@@ -7,12 +7,12 @@ import (
 	"net"
 	"sync"
 
-	"github.com/Andoryuuta/Erupe/common/stringstack"
-	"github.com/Andoryuuta/Erupe/common/stringsupport"
-	"github.com/Andoryuuta/Erupe/network"
-	"github.com/Andoryuuta/Erupe/network/clientctx"
-	"github.com/Andoryuuta/Erupe/network/mhfpacket"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/common/stringstack"
+	"github.com/ShunSato13/Erupe/common/stringsupport"
+	"github.com/ShunSato13/Erupe/network"
+	"github.com/ShunSato13/Erupe/network/clientctx"
+	"github.com/ShunSato13/Erupe/network/mhfpacket"
+	"github.com/ShunSato13/byteframe"
 	"go.uber.org/zap"
 	"golang.org/x/text/encoding/japanese"
 )
@@ -112,7 +112,7 @@ func (s *Session) QueueAck(ackHandle uint32, data []byte) {
 
 func (s *Session) sendLoop() {
 	for {
-		// TODO(Andoryuuta): Test making this into a buffered channel and grouping the packet together before sending.
+		// TODO(ShunSato13): Test making this into a buffered channel and grouping the packet together before sending.
 		rawPacket := <-s.sendPackets
 
 		if rawPacket == nil {

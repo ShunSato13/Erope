@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/Andoryuuta/Erupe/common/bfutil"
+	"github.com/ShunSato13/Erupe/common/bfutil"
 
-	"github.com/Andoryuuta/Erupe/network/mhfpacket"
-	"github.com/Andoryuuta/byteframe"
+	"github.com/ShunSato13/Erupe/network/mhfpacket"
+	"github.com/ShunSato13/byteframe"
 	"go.uber.org/zap"
 )
 

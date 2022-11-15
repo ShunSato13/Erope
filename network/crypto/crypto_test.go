@@ -27,7 +27,7 @@ var tests = []struct {
 		0x2AE4, 0x0A56, 0x01CD, 0x08FB3,
 	},
 	/*
-		// TODO(Andoryuuta): This case fails. Debug the client and figure out if this is valid expected data.
+		// TODO(ShunSato13): This case fails. Debug the client and figure out if this is valid expected data.
 		{
 			commonTestData,
 			995117,

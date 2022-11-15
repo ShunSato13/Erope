@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Andoryuuta/Erupe/config"
+	"github.com/ShunSato13/Erupe/config"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"
